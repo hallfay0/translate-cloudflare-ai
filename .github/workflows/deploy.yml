@@ -1,8 +1,11 @@
 name: Deploy Worker
+
 on:
   push:
   pull_request:
   repository_dispatch:
+  workflow_dispatch: # 这行添加了手动触发的能力
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
